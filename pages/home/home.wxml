@@ -1,9 +1,7 @@
 <!--pages/home/home.wxml-->
-<text>Hello {{name}}</text>
-<view>我的年龄:{{age}}</view>
-<view  wx:for='{{students}}' wx:key="index">
-{{item.name}}--{{item.age}}
-</view>
-<view>当前计数：{{count}}</view>
-<button size="mini" bindtap="handleClickButton">+1</button>
-<button size="mini" bindtap="handleJianButton">-1</button>
+<view class="title">我是首页</view>
+<!-- 第二种获取用户信息的方法 -->
+<button size="mini" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">获取授权</button>
+<!-- 第三种获取用户信息的方法 -->
+<open-data type="userNickName"></open-data>
+<open-data   type="userAvatarUrl"> </open-data>
