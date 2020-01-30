@@ -1,0 +1,9 @@
+<!--pages/home/home.wxml-->
+<text>Hello {{name}}</text>
+<view>我的年龄:{{age}}</view>
+<view  wx:for='{{students}}' wx:key="index">
+{{item.name}}--{{item.age}}
+</view>
+<view>当前计数：{{count}}</view>
+<button size="mini" bindtap="handleClickButton">+1</button>
+<button size="mini" bindtap="handleJianButton">-1</button>
