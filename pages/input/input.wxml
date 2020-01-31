@@ -1,0 +1,12 @@
+<input/>
+
+<input value="a哈哈"></input>
+<input type="number"></input>
+<input password></input>
+<input placeholder="请输入内容" placeholder-style="color:green"></input>
+<input type="text"  confirm-type="next"></input>
+<input 
+bindinput="handleInput"
+bindfocus="handleFous"
+bindblur="handleBlur"
+/>

@@ -1,0 +1,20 @@
+<!-- imaged基本使用 -->
+<!-- <image src="../../assets/images/profile/app.png"/>
+<text>啊哈哈哈</text> -->
+<!-- 本地图片 -->
+<!-- <image src="/assets/images/profile/vip.png"/> -->
+<!-- 远程图片 -->
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"/>
+<!-- 显示相册中的图片 -->
+<button bindtap="handleChoose">选择图片</button>
+<image src="{{imagePath}}" mode="widthFix"/>
+<view>------------------</view>
+<!-- 监听图片加载完成  图片懒加载lazy-load-->
+<image wx:for="{{1}}"
+src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+bindload="handleImageLoad"
+lazy-load/>
+<!-- show-menu-by-longpress长按出现识别小程序码 -->
+<image
+show-menu-by-longpress 
+src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"/>

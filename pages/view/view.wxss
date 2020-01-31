@@ -1,0 +1,22 @@
+/* pages/view/view.wxss */
+.box{
+  background-color: red;
+}
+.box1{
+  width: 100px;
+  height: 100px;
+  background-color: rebeccapurple;
+}
+.hover-view{
+  background-color: red;
+font-size: 30px;
+}
+.box2{
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  background-color: gold;
+}
+.hover-view1{
+  background-color: green
+}
