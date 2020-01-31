@@ -1,0 +1,5 @@
+/* pages/button/button.wxss */
+.Color{
+background-color: red;
+color: white;
+}
