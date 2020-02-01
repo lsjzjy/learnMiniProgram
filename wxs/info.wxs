@@ -1,0 +1,16 @@
+var message = 'codewhy';
+var info = 'lsj';
+var num = function (num1, num2) {
+  return num1 + num2;
+}
+
+var toFixed=function(value){
+  return value.toFixed(2)
+}
+module.exports = {
+
+  message: message,
+  info: info,
+  num: num,
+  toFixed: toFixed
+}

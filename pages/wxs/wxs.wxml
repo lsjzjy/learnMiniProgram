@@ -1,0 +1,15 @@
+<!--pages/wxs/wxs.wxml-->
+
+<!-- wxs定义方式 -->
+
+<wxs src="../../wxs/info.wxs" module="info"/>
+
+    <view>{{info.message}}</view> 
+    <view>{{info.info}}</view>
+    <view>{{info.num(20,30)}}</view>
+    <!-- <view>{{info.toFixed(price)}}</view> -->
+
+
+    <wxs src="../../wxs/format.wxs" module='format'/>
+    <view>{{format.priceFormat(price,2)}}</view> 
+    <view>{{format.dataFormat(time,'yy-MM-dd hh:mm:ss')}}</view>

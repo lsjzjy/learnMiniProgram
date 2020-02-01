@@ -1,0 +1,51 @@
+<view>{{message}}</view>
+<view>{{firstname}} {{lastname}}</view>
+<view>{{firstname +' '+lastname}}</view>
+<view>{{age>=18?'成年人':'未成年人'}}</view>
+<view>{{nowTime}}</view>
+<button bindtap="handleSwitchColor" size="mini">切换颜色</button>
+<view class="box {{isActive?'active':''}}">哈哈哈</view>
+<view>------------------条件判断-------------------</view>
+<button bindtap="handleSwitchShow" size="mini">切换显示</button>
+<view wx:if="{{isShow}}">呵呵呵呵</view>
+
+<button bindtap="handleAdd">分数递增</button>
+<view wx:if="{{score>=90}}">优秀</view>
+<view wx:elif="{{score>=80}}">良好</view>
+<view wx:elif="{{score>=60}}">及格</view>
+<view wx:else>不及格</view>
+
+
+<!-- wx:if  hi -->
+<!-- 列表渲染 -->
+<!-- <view wx:for="{{movies}}" wx:for-item="movie" wx:for-index='i'>{{movie}}--{{i}}</view>
+
+<view hidden="true">哈哈哈</view>
+<view wx:if="{{false}}">哈哈哈</view>
+
+<block wx:for="{{nums}}" wx:for-item="innerNums">
+<block wx:for="{{innerNums}}">
+<view>{{item}}</view>
+</block>
+</block> -->
+<view wx:for="{{['a','b','c']}}" wx:key="index">{{item}}</view>
+
+
+<!-- <template name="contentItem">
+<button size="mini">{{bunText}}</button>
+<view>{{content}}</view>
+</template> -->
+<import src="/wxml/template.wxml"/>
+<import src="/wxml/abc.wxml"/>
+<template is="contentItem" data="{{bunText:'按钮',content:'哈哈哈'}}"/>
+<template is="contentItem" data="{{bunText:'警告',content:'哈哈哈'}}"/>
+<template is="contentItem" data="{{bunText:'拉拉',content:'哈哈哈'}}"/>
+<template is="contentItem" data="{{bunText:'啊啊',content:'哈哈哈'}}"/>
+<template is="abc"/>
+
+<include src="/wxml/header.wxml" />
+<include src="/wxml/footer.wxml"/>
+
+<view></view>
+<view>{{handleToFixed(25.666666666666)}}</view>
+

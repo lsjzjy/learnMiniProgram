@@ -1,0 +1,22 @@
+/* pages/wxss/wxss.wxss */
+@import './style/box.wxss';
+@import './style/weui-searchbar.wxss';
+.box1 {
+  color: red;
+  font-size: 30px;
+}
+
+.container {
+  background-color: green !important;
+}
+
+/* .box2 {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(62, 9, 94);
+}
+.box3 {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: red;
+} */
