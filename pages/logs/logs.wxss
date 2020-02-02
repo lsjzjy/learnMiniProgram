@@ -6,3 +6,15 @@
 .log-item {
   margin: 10rpx;
 }
+.title{
+  font-weight: 700;
+}
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}
+.blue{
+  color: blue;
+}

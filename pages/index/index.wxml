@@ -1,13 +1,22 @@
-<!--index.wxml-->
+<button bind:tap="handleClick" size="mini">按钮</button>
+<button catchtap="handleClick" size="mini">按钮</button>
+<button touchstart="kk" size="mini">按钮</button>
+<!-- 常见的一些事件 -->
+<view class="box" bind:touchstart="handleTouchStart" bind:touchmove="handleTouchMove" bind:touchend="handleTouchEnd" bind:tap="handleTap" bind:longpress="handleLongPress">
+</view>
+<!-- 事件对象 -->
+<button bindtap="handleButton" size="mini">按钮</button>
+
+
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  <block wx:for="{{titles}}" wx:key="index">
+    <view class="item" data-index="{{index}}" data-item="{{item}}" bindtap="handleTap">{{item}}</view>
+  </block>
+</view>
+<!-- 事件冒泡 -->
+<view class="view1"  bindtap="hanldebindView1">
+<view class="view2"  catchtap="hanldebindView2">
+<view class="view3"  bindtap="hanldebindView3">
+</view>
+</view>
 </view>

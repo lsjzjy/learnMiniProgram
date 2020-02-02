@@ -1,6 +1,37 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
-</view>
+<text class="title">hello world </text>
+
+<!-- <my-cpn></my-cpn>
+<my-cpn/>
+<my-cpn/> -->
+<!-- <my-style/> -->
+
+
+<my-prop  title="哈哈哈" titleclass="red"/>
+<my-prop title="呵呵呵" titleclass="green"/>
+<my-prop title="嘿嘿嘿" titleclass="blue"/>
+
+<view>当前计数:{{counter}}</view>
+<my-event bind:Increment="Increment"/>
+
+<w-tab-control 
+titles="{{['衣服','鞋子','裤子']}}"
+bind:itemclcik="handlecontrolclcik"
+/>
+
+
+<my-sel id="sel-id"/>
+<button size="mini" bind:tap="handleIncrement">修改组件内的计数</button>
+
+<my-slot>
+<slider value="90"></slider>
+</my-slot>
+<my-slot>
+<button size="mini">我是插入的按钮</button>
+</my-slot>
+
+<my-mslot>
+<button slot="slot2" size="mini">我是mslot按钮</button>
+<slider value="80" slot="slot1"></slider>
+<view slot="slot3">我睡觉哦啊</view>
+</my-mslot>

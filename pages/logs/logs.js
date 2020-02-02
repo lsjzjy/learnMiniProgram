@@ -1,15 +1,25 @@
 //logs.js
-const util = require('../../utils/util.js')
+
 
 Page({
   data: {
-    logs: []
+    counter: 0
   },
-  onLoad: function () {
+  onLoad: function() {
+
+  },
+  Increment(event) {
+    console.log(event.detail.name, event.detail.age)
+
     this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(log => {
-        return util.formatTime(new Date(log))
-      })
+      counter: ++this.data.counter
     })
+  },
+  handlecontrolclcik(event) {
+    console.log(event)
+  },
+  handleIncrement() {
+    const my_sel = this.selectComponent('#sel-id');
+    my_sel.handleIncrement(20);
   }
 })
